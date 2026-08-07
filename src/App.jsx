@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import Paragrafo from './Paragrafo.jsx'
+import CaixaTexto from './CaixaTexto.jsx'
 
 function App() {
   const [num, setNum] = useState(1)
@@ -20,6 +22,9 @@ function App() {
           <p>
             você clicou {num} vezes, desocupado
           </p>
+            <CaixaTexto />
+            <Paragrafo nome="fulano" />
+            <Paragrafo nome="beltrano" />
         </div>
         <button
           type="button"
