@@ -1,20 +1,23 @@
-import { Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import './App.css'
 import ThemeToggleButton from './components/ThemeToggleButton'
 import { ThemeProvider } from './contexts/ThemeContext'
 import Home from './pages/home'
 import Sobre from './pages/sobre'
+import Usuarios from './pages/Usuarios'
+
 
 function App() {
 
 
   return (
    <ThemeProvider>
-      <browserRouter>
+      <BrowserRouter>
         <div>
           <nav>
             <ul><Link to="/">Home</Link></ul>
-            <ul><Link to="sobre">Sobre</Link></ul>
+            <ul><Link to="/sobre">Sobre</Link></ul>
+            <ul><Link to="/usuarios">Usuários</Link></ul>
           </nav>
           <ThemeToggleButton />
         </div>
@@ -22,10 +25,11 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="sobre" element={<Sobre />} />
+            <Route path="/sobre" element={<Sobre />} />
+            <Route path="/usuarios" element={<Usuarios />} />
           </Routes>
         </div>
-      </browserRouter>
+      </BrowserRouter>
    </ThemeProvider>
   )
 }
