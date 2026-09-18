@@ -5,6 +5,7 @@ import { ThemeProvider } from './contexts/ThemeContext'
 import Home from './pages/home'
 import Sobre from './pages/sobre'
 import Usuarios from './pages/Usuarios'
+import UsuarioDetalhe from './pages/usuariodetalhe'
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/usuarios" element={<Usuarios />} />
+
+            <Route path="/usuarios/:id" element={<UsuarioDetalhe />} />
+
           </Routes>
         </div>
       </BrowserRouter>
